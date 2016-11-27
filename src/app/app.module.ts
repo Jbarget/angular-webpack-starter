@@ -8,7 +8,7 @@ import { NavBar } from './nav.component';
   ],
   declarations: [
     AppComponent,
-    // NavBar
+    NavBar
   ],
   bootstrap: [ AppComponent ]
 })
