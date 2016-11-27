@@ -3,4 +3,7 @@
 dist
 node_modules
 
+src/app/*.*.js
+src/app/*.*.js.map
+
 *.log
