@@ -4,18 +4,29 @@ import { Observable }     from 'rxjs/Observable';
 
 @Injectable()
 export class BugsService {
-  private trelloUrl: string = 'https://api.github.com/users/jbarget';
+  private issueApi: string = 'https://repairly-issue-tracker.herokuapp.com/issues';
   constructor(private http: Http) {}
+  //
+  // getBugs(): Observable<{}> {
+  //   return Observable.create((observer: any) => {
+  //     setTimeout(() => {
+  //       observer.complete({
+  //         open: {number: 10},
+  //         new: {number: 5},
+  //         stale: {number:  3}
+  //       })
+  //     }, 3000)
+  //   });
+  // }
 
   getBugs(): Observable<any> {
-    return this.http.get(this.trelloUrl, {headers: this.getHeaders()})
+    return this.http.get(this.issueApi, {headers: this.getHeaders()})
       .map(this.extractData);
   }
 
   private extractData(res: Response) {
-    console.log(res)
-  let body = res.json();
-  return body || { };
+    let body = res.json();
+    return body || { };
 }
 
   private getHeaders(){
