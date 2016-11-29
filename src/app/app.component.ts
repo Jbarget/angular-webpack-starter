@@ -6,7 +6,7 @@ import '../../public/css/styles.css';
     <nav-bar></nav-bar>
     <main>
       <h1>Hello from Angular App with Webpack</h1>
-      <img src="../../public/images/angular.png">
+      <bugs></bugs>
     </main>`,
   styleUrls: ['./app.component.css']
 })
